@@ -12,6 +12,10 @@ const alias: Record<string, string> = {
   '~': r('src'),
 }
 
+const __APP_INFO__ = {
+  lastBuildTime: dayjs().format('YYYY/MM/DD HH:mm'),
+}
+
 export default defineConfig({
   plugins: [
     Vue(),
@@ -29,7 +33,7 @@ export default defineConfig({
     UnoCSS(),
   ],
   define: {
-    __BUILD_TIME__: JSON.stringify(dayjs().format('YYYY/MM/DD HH:mm')),
+    __APP_INFO__: JSON.stringify(__APP_INFO__),
   },
   resolve: {
     alias,
