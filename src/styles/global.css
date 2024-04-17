@@ -1,0 +1,15 @@
+html,
+body,
+#app {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --at-apply: bg-base color-base font-sans;
+}
+
+html.dark {
+  color-scheme: dark;
+}
