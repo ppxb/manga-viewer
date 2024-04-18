@@ -15,6 +15,13 @@ const { lastBuildTime } = __APP_INFO__
       href="#"
       btn-action text-base px3 py1
     >
+      <div i-ph-eye-closed-duotone flex-none />
+      View
+    </a>
+    <a
+      href="#"
+      btn-action text-base px3 py1
+    >
       <div i-ph-download-duotone flex-none />
       Download
     </a>
@@ -36,12 +43,6 @@ const { lastBuildTime } = __APP_INFO__
       title="Toggle Dark Mode"
       i-ph-sun-dim-duotone dark:i-ph-moon-duotone ml1 text-xl op50 hover:op75
       @click="toggleDark()"
-    />
-    <button
-      title="Toggle Rule View"
-      lt-md:hidden
-      i-ph-list-duotone
-      text-xl op50 hover:op75
     />
     <a
       href="https://github.com/ppxb" target="_blank"

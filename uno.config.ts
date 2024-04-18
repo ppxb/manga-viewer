@@ -18,6 +18,12 @@ export default defineConfig({
     'bg-hover': 'bg-primary-400:5',
 
     'btn-action': 'border border-base rounded flex gap-2 items-center px2 py1 op75 hover:op100 hover:bg-hover',
+
+    'bg-card': 'bg-[#f5f5f5] dark:bg-neutral-800',
+
+    'text-tiny': 'text-12px',
+    'text-category': 'text-[#3a88b4]',
+    'text-tag': 'text-[#3ab483]',
   },
   theme: {
     colors: {

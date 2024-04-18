@@ -6,7 +6,7 @@ declare global {
   interface MangaInfo {
     comic: {
       author: string
-      caption: string
+      title: string
       category: string
       tags: string[]
       logo: string

@@ -17,7 +17,7 @@ pub struct MangaInfoDomain {
 
 #[derive(serde::Serialize)]
 pub struct MangaInfoComic {
-    caption: String,
+    title: String,
     author: String,
     category: String,
     tags: Vec<String>,
@@ -96,7 +96,7 @@ pub async fn get_manga_detail(url: &str) -> Result<MangaInfo, String> {
             path: String::from(path),
         },
         comic: MangaInfoComic {
-            caption: String::from(raw["comic"]["caption"].as_str().unwrap_or("")),
+            title: String::from(raw["comic"]["title"].as_str().unwrap_or("")),
             author: String::from(raw["comic"]["author"].as_str().unwrap_or("")),
             category: String::from(
                 raw["comic"]["comic_category"]["display_name"]

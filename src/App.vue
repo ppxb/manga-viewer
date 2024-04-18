@@ -25,9 +25,9 @@ async function handleSearchManga() {
         <input
           v-model="input"
           :disabled="loading"
+          :class="input ? 'font-mono' : ''"
           placeholder="Get manga with full url"
           border="~ base rounded-full"
-          :class="input ? 'font-mono' : ''"
           w-full bg-transparent px3 py2 pl10 outline-none
           @keydown.enter.prevent="handleSearchManga()"
         >
