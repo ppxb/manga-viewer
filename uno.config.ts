@@ -46,8 +46,9 @@ export default defineConfig({
     }),
     presetWebFonts({
       fonts: {
-        sans: 'Inter',
-        mono: 'Space Mono',
+        'sans': 'Inter',
+        'sans-jp': 'Noto Sans JP',
+        'mono': 'Space Mono',
       },
     }),
   ],
