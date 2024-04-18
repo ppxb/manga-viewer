@@ -15,15 +15,8 @@ const { lastBuildTime } = __APP_INFO__
       href="#"
       btn-action text-base px3 py1
     >
-      <div i-ph-stack-duotone flex-none />
-      Configs
-    </a>
-    <a
-      href="#"
-      btn-action text-base px3 py1
-    >
-      <div i-ph-list-dashes-duotone flex-none />
-      Rules
+      <div i-ph-download-duotone flex-none />
+      Download
     </a>
     <a
       href="#"
@@ -31,6 +24,13 @@ const { lastBuildTime } = __APP_INFO__
     >
       <div i-ph-files-duotone flex-none />
       Files
+    </a>
+    <a
+      href="#"
+      btn-action text-base px3 py1
+    >
+      <div i-ph-gear-duotone flex-none />
+      Settings
     </a>
     <button
       title="Toggle Dark Mode"

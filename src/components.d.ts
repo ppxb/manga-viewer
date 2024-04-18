@@ -8,9 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Logo: typeof import('./components/Logo.vue')['default']
-    MangaSearchInput: typeof import('./components/MangaSearchInput.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     SearchInput: typeof import('./components/SearchInput.vue')['default']
-    TemplateWelcome: typeof import('./components/TemplateWelcome.vue')['default']
   }
 }

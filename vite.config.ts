@@ -32,6 +32,19 @@ export default defineConfig({
     }),
     UnoCSS(),
   ],
+  clearScreen: false,
+  envPrefix: ['VITE_', 'TAURI_'],
+  server: {
+    port: 4399,
+    strictPort: true,
+  },
+  build: {
+    outDir: './dist',
+    target: process.env.TAURI_PLATFORM === 'windows' ? 'chrome105' : 'safari15',
+    minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
+    sourcemap: !!process.env.TAURI_DEBUG,
+    emptyOutDir: true,
+  },
   define: {
     __APP_INFO__: JSON.stringify(__APP_INFO__),
   },

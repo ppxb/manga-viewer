@@ -1,16 +1,11 @@
 <script setup lang="ts">
-import { $fetch } from 'ofetch'
-
-import { supportedSites } from '~/constants/sites.constant'
+import { invoke } from '@tauri-apps/api'
 
 const input = ref('')
 
 async function handleSearchManga() {
-  const { hostname, pathname } = new URL(input.value)
-  const site = supportedSites.filter(s => s.hostname === hostname)
-  if (site.length === 0)
-    return
-  const res = await $fetch(`${site[0].apiUrl.replace('$', pathname)}`, { parseResponse: JSON.parse })
+  const res = await invoke('get_manga_detail', { url: input.value })
+  console.log(res)
 }
 </script>
 
