@@ -16,8 +16,16 @@ export default defineConfig({
     'border-base': 'border-#aaa3',
 
     'bg-hover': 'bg-primary-400:5',
+    'bg-glass': 'bg-white:75 dark:bg-neutral-900:75 backdrop-blur-5',
+    'bg-tooltip': 'bg-white:75 dark:bg-neutral-900:75 backdrop-blur-8',
 
-    'btn-action': 'border border-base rounded flex gap-2 items-center px2 py1 op75 hover:op100 hover:bg-hover',
+    'color-active': 'color-primary-600 dark:color-primary-400',
+    'border-active': 'border-primary-600/25 dark:border-primary-400/25',
+    'bg-active': 'bg-primary-400:10',
+
+    'btn-action': 'border border-base rounded-2xl flex gap-2 items-center px2 py1 op75 hover:op100 hover:bg-hover',
+    'btn-action-sm': 'btn-action text-sm',
+    'btn-action-active': 'color-active border-active! bg-active op100!',
 
     'bg-card': 'bg-[#f5f5f5] dark:bg-neutral-800',
 

@@ -1,6 +1,7 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
+import Pages from 'vite-plugin-pages'
 import dayjs from 'dayjs'
 import UnoCSS from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -19,6 +20,9 @@ const __APP_INFO__ = {
 export default defineConfig({
   plugins: [
     Vue(),
+    Pages({
+      importMode: 'sync',
+    }),
     Components({
       dts: 'src/components.d.ts',
     }),

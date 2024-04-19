@@ -56,7 +56,8 @@ const nextPublishAt = computed(() => dayjs(comic.value.next_publish_at).format('
             {{ comic.episodes.length > 1 ? "最新话" : "当前话" }}
           </span>
           <div w1px h12px bg-neutral-900:10 dark:bg-neutral-300:15 />
-          <span mr1>{{ comic.episodes[0].volume }}</span>{{ comic.episodes[0].title }}
+          <span>{{ comic.episodes[0].volume }}</span>
+          <span>{{ comic.episodes[0].title }}</span>
         </div>
         <div font-sans-jp font-bold rounded-2xl text-tiny bg-card w-fit flex="~ items-center gap-2" px3 py1>
           <span text-red-400>次回更新日</span>

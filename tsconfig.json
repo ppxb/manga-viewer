@@ -19,7 +19,8 @@
     "noUnusedLocals": true,
     "types": [
       "vitest",
-      "vite/client"
+      "vite/client",
+      "vite-plugin-pages/client"
     ],
     "paths": {
       "~/*": [

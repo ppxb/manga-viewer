@@ -11,34 +11,38 @@ const { lastBuildTime } = __APP_INFO__
     <span op75>{{ lastBuildTime }}</span>
   </div>
   <div flex="~ gap-3 items-center wrap" py4>
-    <a
-      href="#"
+    <RouterLink
+      to="/"
       btn-action text-base px3 py1
+      active-class="btn-action-active"
     >
       <div i-ph-eye-closed-duotone flex-none />
       View
-    </a>
-    <a
-      href="#"
+    </RouterLink>
+    <RouterLink
+      to="/download"
       btn-action text-base px3 py1
+      active-class="btn-action-active"
     >
       <div i-ph-download-duotone flex-none />
       Download
-    </a>
-    <a
-      href="#"
+    </RouterLink>
+    <RouterLink
+      to="/files"
       btn-action text-base px3 py1
+      active-class="btn-action-active"
     >
       <div i-ph-files-duotone flex-none />
       Files
-    </a>
-    <a
-      href="#"
+    </RouterLink>
+    <RouterLink
+      to="/settings"
       btn-action text-base px3 py1
+      active-class="btn-action-active"
     >
       <div i-ph-gear-duotone flex-none />
       Settings
-    </a>
+    </RouterLink>
     <button
       title="Toggle Dark Mode"
       i-ph-sun-dim-duotone dark:i-ph-moon-duotone ml1 text-xl op50 hover:op75

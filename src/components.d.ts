@@ -10,5 +10,7 @@ declare module 'vue' {
     Logo: typeof import('./components/Logo.vue')['default']
     MangaInfoItem: typeof import('./components/MangaInfoItem.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
   }
 }
