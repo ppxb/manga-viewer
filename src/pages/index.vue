@@ -12,7 +12,6 @@ async function handleSearchManga() {
   try {
     const res = await invoke('get_manga_detail', { url: input.value })
     mangaInfo.value = res as MangaInfo
-    console.log(res)
   }
   finally {
     loading.value = false

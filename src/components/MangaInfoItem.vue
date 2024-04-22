@@ -15,7 +15,7 @@ const info = computed(() => props.info)
         :src="info.icon"
         absolute top-4 left-4 w20
       >
-      <div i-ph-heart-duotone absolute top-3 right-4 flex-none hover:cursor-pointer />
+      <div v-if="info.episodes.length > 1" i-ph-heart-duotone absolute top-3 right-4 flex-none hover:cursor-pointer />
       <div font-sans-jp flex="~ col items-center">
         <img
           :src="info.logo"
