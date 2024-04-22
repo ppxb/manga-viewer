@@ -4,21 +4,19 @@ declare global {
   }
 
   interface MangaInfo {
-    comic: {
-      author: string
-      title: string
-      category: string
-      tags: string[]
-      logo: string
-      episodes: MangaEpisode[]
-      next_publish_at: string
-    }
-    domain: {
-      icon: string
-      name: string
-      path: string
-      url: string
-    }
+    author: string
+    title: string
+    category: string
+    tags: string[]
+    logo: string
+    episodes: MangaEpisode[]
+    next_publish_at: string
+    icon: string
+    name: string
+    path: string
+    url: string
+    outline: string
+    caption: string
   }
 
   interface MangaEpisode {

@@ -16,15 +16,15 @@ const { lastBuildTime } = __APP_INFO__
       btn-action text-base px3 py1
       active-class="btn-action-active"
     >
-      <div i-ph-eye-closed-duotone flex-none />
-      View
+      <div i-ph-link-break-duotone flex-none />
+      Link
     </RouterLink>
     <RouterLink
       to="/download"
       btn-action text-base px3 py1
       active-class="btn-action-active"
     >
-      <div i-ph-download-duotone flex-none />
+      <div i-ph-cloud-arrow-down-duotone flex-none />
       Download
     </RouterLink>
     <RouterLink
@@ -32,8 +32,8 @@ const { lastBuildTime } = __APP_INFO__
       btn-action text-base px3 py1
       active-class="btn-action-active"
     >
-      <div i-ph-files-duotone flex-none />
-      Files
+      <div i-ph-heart-duotone flex-none />
+      Favorite
     </RouterLink>
     <RouterLink
       to="/settings"

@@ -1,22 +1,15 @@
+use std::os::raw;
+use std::string;
+
 use tauri::regex::Regex;
 use tauri::{api, command, AppHandle, Manager};
 
 #[derive(serde::Serialize)]
 pub struct MangaInfo {
-    domain: MangaInfoDomain,
-    comic: MangaInfoComic,
-}
-
-#[derive(serde::Serialize)]
-pub struct MangaInfoDomain {
     name: String,
     url: String,
     path: String,
     icon: String,
-}
-
-#[derive(serde::Serialize)]
-pub struct MangaInfoComic {
     title: String,
     author: String,
     category: String,
@@ -24,6 +17,8 @@ pub struct MangaInfoComic {
     logo: String,
     episodes: Vec<MangaInfoEpisode>,
     next_publish_at: String,
+    outline: String,
+    caption: String,
 }
 
 #[derive(serde::Serialize)]
@@ -89,24 +84,22 @@ pub async fn get_manga_detail(url: &str) -> Result<MangaInfo, String> {
         })
         .collect::<Vec<MangaInfoEpisode>>();
     Ok(MangaInfo {
-        domain: MangaInfoDomain {
-            name: String::from("マンガクロス"),
-            icon: String::from("https://mangacross.jp/img/logo_pc.svg"),
-            url: String::from(domain),
-            path: String::from(path),
-        },
-        comic: MangaInfoComic {
-            title: String::from(raw["comic"]["title"].as_str().unwrap_or("")),
-            author: String::from(raw["comic"]["author"].as_str().unwrap_or("")),
-            category: String::from(
-                raw["comic"]["comic_category"]["display_name"]
-                    .as_str()
-                    .unwrap_or(""),
-            ),
-            tags,
-            episodes,
-            logo: String::from(raw["comic"]["logo_url"].as_str().unwrap_or("")),
-            next_publish_at: String::from(raw["comic"]["next_publish_at"].as_str().unwrap_or("")),
-        },
+        name: String::from("マンガクロス"),
+        icon: String::from("https://mangacross.jp/img/logo_pc.svg"),
+        url: String::from(domain),
+        path: String::from(path),
+        title: String::from(raw["comic"]["title"].as_str().unwrap_or("")),
+        author: String::from(raw["comic"]["author"].as_str().unwrap_or("")),
+        category: String::from(
+            raw["comic"]["comic_category"]["display_name"]
+                .as_str()
+                .unwrap_or(""),
+        ),
+        tags,
+        episodes,
+        outline: String::from(raw["comic"]["outline"].as_str().unwrap_or("")),
+        caption: String::from(raw["comic"]["caption"].as_str().unwrap_or("")),
+        logo: String::from(raw["comic"]["logo_url"].as_str().unwrap_or("")),
+        next_publish_at: String::from(raw["comic"]["next_publish_at"].as_str().unwrap_or("")),
     })
 }
