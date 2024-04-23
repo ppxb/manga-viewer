@@ -12,9 +12,10 @@ withDefaults(defineProps<{
   <div>
     <a
       href="https//github.com/ppxb/manga-viewer"
+      font-mono font-bold
       flex="inline gap-2 items-center" mr1
     >
-      Manga Viewer
+      VISION
     </a>
     <a
       v-if="showVersion"

@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { setupLayouts } from 'virtual:generated-layouts'
 
 import App from './App.vue'
 
@@ -11,7 +12,7 @@ import '~/styles/global.css'
 
 const router = createRouter({
   history: createWebHashHistory('/'),
-  routes,
+  routes: setupLayouts(routes),
 })
 
 function bootstrap() {

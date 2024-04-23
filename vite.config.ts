@@ -1,9 +1,10 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
 import dayjs from 'dayjs'
 import UnoCSS from 'unocss/vite'
+import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 
@@ -18,8 +19,12 @@ const __APP_INFO__ = {
 }
 
 export default defineConfig({
+  resolve: {
+    alias,
+  },
   plugins: [
     Vue(),
+    Layouts(),
     Pages({
       importMode: 'sync',
     }),
@@ -51,8 +56,5 @@ export default defineConfig({
   },
   define: {
     __APP_INFO__: JSON.stringify(__APP_INFO__),
-  },
-  resolve: {
-    alias,
   },
 })
